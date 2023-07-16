@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -18,8 +18,10 @@ import {
 } from "reactstrap";
 
 function OnlyNav() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
-  const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [navbarColor, setNavbarColor] = useState("navbar-transparent");
+  const [collapseOpen, setCollapseOpen] = useState(false);
+   const [auth, setAuth] = useState(false);
+
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
@@ -51,14 +53,14 @@ function OnlyNav() {
         />
       ) : null}
       <Navbar className={ + navbarColor} expand="lg" color="info">
-        <Container >
+      <Container >
           <div className="navbar-translate">
             <NavbarBrand
               id="navbar-brand"
             >
-             <b>Prove YourSelf</b> 
+              <b>Prove YourSelf</b>
             </NavbarBrand>
-          
+
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -80,42 +82,70 @@ function OnlyNav() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink>
+                <NavLink
+                >
                   <Link to="/">
-                  <i className="now-ui-icons shopping_shop"></i>
-                  <p>Home</p>
+                    <i className="now-ui-icons shopping_shop"></i>
+                    <p>Home</p>
                   </Link>
+
                 </NavLink>
               </NavItem>
               <NavItem>
-               
+
                 <NavLink
                 >
                   <Link to="/about">
-                  <i className="now-ui-icons design_palette"></i>
-                  <p>About</p>
+                    <i className="now-ui-icons design_palette"></i>
+                    <p>About</p>
                   </Link>
                 </NavLink>
               </NavItem>
               <NavItem>
-               
+
                 <NavLink
                 >
-                  <Link to="/about">
-                  <i className="now-ui-icons ui-1_send"></i>
-                  <p>Contact us</p>
+                  <Link to="/contact-us">
+                    <i className="now-ui-icons ui-1_send"></i>
+                    <p>Contact us</p>
                   </Link>
                 </NavLink>
               </NavItem>
               <NavItem>
-               
+
                 <NavLink
                 >
                   <Link to="/courses">
-                  <i className="now-ui-icons ui-1_send"></i>
-                  <p>Courses</p>
+                    <i className="now-ui-icons files_paper"></i>
+                    <p>Courses</p>
                   </Link>
                 </NavLink>
+              </NavItem>
+              <NavItem>
+                {auth ?
+                  <NavLink
+                  >
+                    <Link to="/">
+                      <i class="now-ui-icons users_circle-08"></i>
+                      <p>UserName</p>
+                    </Link>
+                  </NavLink>
+                  : <NavLink
+                  >
+                    <Link to='/register'>
+                      <Button
+                        className="nav-link btn-neutral"
+                        color="info"
+                        id="upgrade-to-pro"
+                        style={{ "lineHeight": "3px" }}
+                      >
+
+                        <b>Join Us</b>
+                      </Button>
+                    </Link>
+                  
+                  </NavLink>}
+
               </NavItem>
               {/* <UncontrolledDropdown nav>
                 <DropdownToggle

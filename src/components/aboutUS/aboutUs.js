@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function HomeSection2() {
+export default function AboutUs() {
     return (
         <div>
             <div className="container-xxl py-5">

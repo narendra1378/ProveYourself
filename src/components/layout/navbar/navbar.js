@@ -104,7 +104,7 @@ function NavBar() {
 
                 <NavLink
                 >
-                  <Link to="/about">
+                  <Link to="/contact-us">
                     <i className="now-ui-icons ui-1_send"></i>
                     <p>Contact us</p>
                   </Link>
@@ -114,37 +114,37 @@ function NavBar() {
 
                 <NavLink
                 >
-                  <Link to="/about">
-                    <i className="now-ui-icons ui-1_send"></i>
+                  <Link to="/courses">
+                    <i className="now-ui-icons files_paper"></i>
                     <p>Courses</p>
                   </Link>
                 </NavLink>
               </NavItem>
               <NavItem>
-                {!auth? 
-                    <NavLink
-                >
-                  <Link to="/about">
-                  <i class="now-ui-icons users_circle-08"></i>
-                    <p>UserName</p>
-                  </Link>
-                </NavLink>
-                : <NavLink
-                >
-                  <Button
-                  className="nav-link btn-neutral"
-                  color="info"
-                  id="upgrade-to-pro"
-                  style={{"lineHeight": "0px"}}
+                {auth ?
+                  <NavLink
                   >
-                
-                  <b>Join Us</b>
-                </Button>
-                <UncontrolledTooltip target="#upgrade-to-pro">
-                     Join Us 
-                </UncontrolledTooltip>
-                </NavLink> }
-                
+                    <Link to="/about">
+                      <i class="now-ui-icons users_circle-08"></i>
+                      <p>UserName</p>
+                    </Link>
+                  </NavLink>
+                  : <NavLink
+                  >
+                    <Link to='/register'>
+                      <Button
+                        className="nav-link btn-neutral"
+                        color="info"
+                        id="upgrade-to-pro"
+                        style={{ "lineHeight": "3px" }}
+                      >
+
+                        <b>Join Us</b>
+                      </Button>
+                    </Link>
+                  
+                  </NavLink>}
+
               </NavItem>
               {/* <UncontrolledDropdown nav>
                 <DropdownToggle
