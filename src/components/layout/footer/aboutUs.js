@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 // backgroundColor:"#2CA8FF" 
 const AboutUs = () => {
   return (
@@ -41,21 +42,18 @@ const AboutUs = () => {
           <div className="row g-5">
             <div className="col-lg-3 col-md-6">
               <h4 className="text-white mb-3">Quick Link</h4>
-              <a className="btn btn-link" href="">
-                About Us
-              </a>
-              <a className="btn btn-link" href="">
-                Contact Us
-              </a>
-              <a className="btn btn-link" href="">
-                Privacy Policy
-              </a>
-              <a className="btn btn-link" href="">
-                Terms &amp; Condition
-              </a>
-              <a className="btn btn-link" href="">
-                FAQs &amp; Help
-              </a>
+              <ul>
+                <li>
+                  <Link to="Home">Home</Link>
+                </li>
+                <li>
+                  <Link to="Home">About Us</Link>
+                </li>
+                <li>
+                  <Link to="Home">Contact Us</Link>
+                </li>
+              </ul>
+              
             </div>
             <div className="col-lg-3 col-md-6">
               <h4 className="text-white mb-3">Contact</h4>
