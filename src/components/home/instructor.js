@@ -49,15 +49,15 @@ export default function Instructor() {
                             <h3 className='text-center'><b>john marcus</b></h3>
                             <p className='text-center'>designnation</p>
                         </div>
-                        <div className='card col-11'>
-                            <img className="img-fluid mt-1" src={require("assets/img/bgn2.webp")} alt="" />
+                        <div className='card col-11 custom-card' >
+                            <img className="img-fluid mt-1" src={require("assets/img/julie.jpg")} alt="" />
                             <h3 className='text-center'><b>john marcus</b></h3>
                             <p className='text-center'>designnation</p>
                         </div>
-                        <div className='card  col-11'>
-                            <img className="img-fluid" src={require("assets/img/bgn2.webp")} alt="" />
+                        <div className='card col-11'>
+                            <img className="img-fluid mt-1" src={require("assets/img/ryan.jpg")} alt="" />
                             <h3 className='text-center'><b>john marcus</b></h3>
-                            <p className='text-center'>some designnation</p>
+                            <p className='text-center'>designnation</p>
                         </div>
                     </Carousel>
                 </div>

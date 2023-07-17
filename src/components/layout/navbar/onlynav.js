@@ -122,6 +122,16 @@ function OnlyNav() {
                 </NavLink>
               </NavItem>
               <NavItem>
+
+                <NavLink
+                >
+                  <Link to="/opening">
+                    <i className="now-ui-icons ui-1_bell-53"></i>
+                    <p>Openings</p>
+                  </Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 {auth ?
                   <NavLink
                   >

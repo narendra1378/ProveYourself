@@ -9,7 +9,6 @@ import AboutUs from 'components/aboutUS/aboutUs'
 export default function Home() {
   return (
     <div>
-         
          <HomeSection1 />
          <AboutUs/>
          <CoursesSection/>

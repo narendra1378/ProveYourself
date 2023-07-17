@@ -121,6 +121,16 @@ function NavBar() {
                 </NavLink>
               </NavItem>
               <NavItem>
+
+                <NavLink
+                >
+                  <Link to="/opening">
+                    <i className="now-ui-icons ui-1_bell-53"></i>
+                    <p>Opening</p>
+                  </Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 {auth ?
                   <NavLink
                   >
